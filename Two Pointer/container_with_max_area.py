@@ -35,14 +35,14 @@ class TestSolution(unittest.TestCase):
        self.assertEqual(max,21)
 
    def test_short_array(self):
-        vals = [1,2,1]
-        max = Solution.max_area(vals)
-        self.assertEqual(max,2)
+      vals = [1,2,1]
+      max = Solution.max_area(vals)
+      self.assertEqual(max,2)
 
    def test_wide_array(self):
-        vals = [2,3,4,5,1,4,6,3,2]
-        max = Solution.max_area(vals)
-        self.assertEqual(max,18)     
+      vals = [2,3,4,5,1,4,6,3,2]
+      max = Solution.max_area(vals)
+      self.assertEqual(max,18)     
  
 if __name__ == '__main__':
     unittest.main()
