@@ -4,7 +4,7 @@ import unittest
 
 class Solution:
     def three_sum(nums: list):
-        nums.sort
+        nums.sort()
         result = []
         for i in range(len(nums) - 2):
             if i > 0 and nums[i] == nums[i-1]:
@@ -33,7 +33,17 @@ class TestSolution(unittest.TestCase):
     def test_array_1(self):
         vals = [-1, 0, 1, 2, -1, -1]
         result = Solution.three_sum(vals)
-        self.assertEqual(result, [[-1, 2, -1], [0, 1, -1]])
+        self.assertEqual(result, [[-1, -1, 2], [-1, 0, 1]])
+
+    def test_array_2(self):
+        vals = [0, 0, 0, 0]
+        result = Solution.three_sum(vals)
+        self.assertEqual(result, [[0, 0, 0]])
+
+    def test_array_2(self):
+        vals = [1, 2, -2, -1]
+        result = Solution.three_sum(vals)
+        self.assertEqual(result, [])
 
 
 if __name__ == '__main__':
